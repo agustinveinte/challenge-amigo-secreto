@@ -11,6 +11,8 @@ function agregarAmigo() {
         amigos.push(amigoNombre);
         console.log(amigoNombre + " " + "agregado a la lista");
         console.log("Estado actual de la lista: " + amigos);
+        //actualizar lista
+        actualizarLista();
         //Limpiar campo de entrada
         document.getElementById("amigo").value = "";
     } else {
@@ -28,6 +30,21 @@ function validarEntrada(entrada) {
         return false;
     } else {
         return true;
+    }
+}
+
+/*
+Crea una función que recorra el array amigos y agregue cada nombre como un elemento <li> dentro 
+de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
+ */
+function actualizarLista() {
+    //Obtener el elemento de la lista
+    lista = document.getElementById("listaAmigos");
+    //Limpiar la lista existente
+    lista.innerHTML = "";
+    //Iterar sobre el arreglo
+    for (let index = 0; index < amigos.length; index++) {
+        lista.innerHTML += "<li>" + amigos[index] + "</li>";
     }
 }
 
