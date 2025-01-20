@@ -1,4 +1,4 @@
-<em>#Challenge amigo secreto</em>
+<h1 align="center">Challenge amigo secreto</h1>
 
 Aplicación que permita a los usuarios ingresar nombres de amigos en una lista para luego realizar un sorteo aleatorio y determinar quién es el "amigo secreto".
 
