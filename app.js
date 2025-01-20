@@ -48,3 +48,25 @@ function actualizarLista() {
     }
 }
 
+/*
+Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos.
+Usa Math.random() y Math.floor() para obtener un índice aleatorio.
+ */
+function sortearAmigo() {
+    //Validar que haya amigos disponibles
+    if (amigos.length > 0) {
+        //generar indice aleatorio
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        console.log("Indice aleatorio generado: "+indiceAleatorio);
+        //Obtener el nombre sorteado
+        let nombreSorteado= amigos[indiceAleatorio];
+        console.log("Amigo seleccionado: "+nombreSorteado);
+        //Mostrar el resultado
+        document.getElementById("resultado").innerHTML=nombreSorteado;
+    } else {
+        alert("No hay amigos en la lista.");
+    }
+}
+
+
+
